@@ -1,7 +1,10 @@
 #include <stdio.h>
 //funcaoPrincipal Main()
 int main() {
+// ----- Desafio: nível aventureiro Movimentando o Cavalo
 
+ printf("\n\n");
+  printf("Desafio: nível novato:\n\n");
      //aqui o código imprimi o título para o movimento da Torre.
     printf("Movimento da Torre:\n");
 
@@ -41,6 +44,45 @@ int main() {
         printf("Esquerda \n");
         contador++;
     } while (contador <= 8);
+
+
+
+
+// ----- Desafio: nível aventureiro Movimentando o Cavalo
+
+ printf("\n\n");
+  printf("Desafio: nível aventureiro Movimentando o Cavalo:\n");
+
+// ----- Movimentos das outras peças -----
+    // Aqui você pode manter os movimentos anteriores, como:
+    // printf("Cima\n");
+    // printf("Cima\n");
+    // printf("Direita\n");
+    // printf("\n"); // Separação entre peças
+
+    // ----- Movimento do Cavalo -----
+    
+    // Definindo o número de casas para cada direção
+    int casasBaixo = 2;
+    int casasEsquerda = 1;
+   
+    printf("Movimento do Cavalo:\n");
+
+    // Loop externo para percorrer as casas na direção vertical (para baixo)
+    for (int i = 0; i < casasBaixo; i++) {
+        printf("Baixo\n"); // imprime cada passo para baixo
+    }
+
+    // Loop interno para percorrer a casa na direção horizontal (para esquerda)
+    int j = 0; // contador para o loop while
+    while (j < casasEsquerda) {
+        printf("Esquerda\n"); // imprime cada passo para esquerda
+        j++;
+    }
+
+    // Linha em branco para separar o Cavalo de outras peças
+    printf("\n");
+
     return 0;
 }
 
