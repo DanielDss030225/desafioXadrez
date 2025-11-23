@@ -1,24 +1,25 @@
 #include <stdio.h>
 
-// -----------------------------
-// Funções recursivas
-// -----------------------------
+///COM DEUS NA FRENTE VAMOS EM FRENTE!
 
-// Torre para cima
+// Funções recursivas
+
+
+//Função para mover a Torre para cima
 void moverTorreCima(int casas) {
     if (casas == 0) return;
     printf("Cima\n");
     moverTorreCima(casas - 1);
 }
 
-// Torre para baixo
+// Função para mover a  Torre para baixo
 void moverTorreBaixo(int casas) {
     if (casas == 0) return;
     printf("Baixo\n");
     moverTorreBaixo(casas - 1);
 }
 
-// Bispo: recursivo e com loops aninhados
+// Função para mover o Bispo: recursivo e com loops aninhados
 void moverBispo(int vertical, int horizontal) {
     if (vertical == 0) return;
     // Loop interno para horizontal
@@ -29,7 +30,7 @@ void moverBispo(int vertical, int horizontal) {
     moverBispo(vertical - 1, horizontal);
 }
 
-// Rainha: combina Torre e Bispo recursivamente
+// Função para mover a Rainha: combina Torre e Bispo recursivamente
 void moverRainha(int cima, int direita) {
     if (cima > 0) {
         printf("Cima\n");
@@ -40,9 +41,7 @@ void moverRainha(int cima, int direita) {
     }
 }
 
-// -----------------------------
-// Cavalo com loops complexos
-// -----------------------------
+//função para mover o cavalo...com loops complexos 
 void moverCavalo() {
     printf("Movimento do Cavalo (nível mestre):\n");
 
@@ -64,30 +63,31 @@ void moverCavalo() {
     printf("\n");
 }
 
-// -----------------------------
-// Função principal
-// -----------------------------
+/// função principal "main" funciona como uma classe, em .js, react, angular, etc... vamor fazer acontecer dentro desta função.
+
+
 int main() {
+   ///título para estilizar "tentar deixar mais bonitinho o console".
+    printf("\nDesafio: nível mestre - Criando Movimentos Complexos\n\n");
 
-    printf("\nDesafio: nível mestre -- Criando Movimentos Complexos\n\n");
+    // chamando o movimento da Torre
+    printf("Movimento da Torre:\n"); //título
+    moverTorreCima(3); //move 3 vezes a torre para cima
+    moverTorreBaixo(2); //move 2 vezes a torre para baixo
+    printf("\n"); //saltar linha para próxima função
 
-    // Torre
-    printf("Movimento da Torre:\n");
-    moverTorreCima(3);
-    moverTorreBaixo(2);
-    printf("\n");
+    // chamando o movimento do Bispo
+    printf("Movimento do Bispo:\n"); //título
+    moverBispo(2, 2); // move dois para cima e dois para direita
+    printf("\n"); //saltar linha para próxima função
 
-    // Bispo
-    printf("Movimento do Bispo:\n");
-    moverBispo(2, 2); // sobe 2, direita 2
-    printf("\n");
 
-    // Rainha
-    printf("Movimento da Rainha:\n");
-    moverRainha(2, 3); // exemplo de movimento
-    printf("\n");
+    // chamando o movimento da Rainha
+    printf("Movimento da Rainha:\n"); //título
+    moverRainha(2, 3); // move dois para cima e 3 para direita
+    printf("\n"); //saltar linha para próxima função
 
-    // Cavalo
+    // chamando o movimento do Cavalo
     moverCavalo();
 
     return 0;
